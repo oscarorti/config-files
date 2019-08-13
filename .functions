@@ -1,0 +1,19 @@
+## ssh functions ##
+
+function start_ssh_agent(){
+  # start the agent with key lifetime of 10hours
+  eval `ssh-agent -t 36000`
+}
+
+function add_ssh_key(){
+  local -r key_name="$1"
+  ssh-add "$HOME/.ssh/$key_name"
+}
+
+function gitlab-login(){
+  ssh-add "$HOME/.ssh/gitlab"
+}
+
+function github-login(){
+  ssh-add "$HOME/.ssh/github"
+}
