@@ -1,0 +1,20 @@
+## Fast cd ##
+alias ..='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+## Colorize the grep command output for ease of use (good for log files) ##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+## colorls ##
+source $(dirname $(gem which colorls))/tab_complete.sh
+alias ls=colorls — light — sort-dirs — report
+alias lc=colorls — tree — light
+
+## Directories alias ##
+export SSH=~/.ssh
+
