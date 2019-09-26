@@ -12,8 +12,9 @@ alias fgrep='fgrep --color=auto'
 
 ## colorls ##
 source $(dirname $(gem which colorls))/tab_complete.sh
-alias ls=colorls — light — sort-dirs — report
-alias lc=colorls — tree — light
+alias ls='colorls --sort-dirs'
+alias lt='colorls --tree'
+alias la='colorls -a'
 
 ## Directories alias ##
 export SSH=~/.ssh
