@@ -8,16 +8,7 @@ export ZSH="/Users/oscarortigonzalez/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
-
-export SPACESHIP_PROMPT_ADD_NEWLINE="true"
-export SPACESHIP_CHAR_SYMBOL=" \uf0e7"
-export SPACESHIP_CHAR_PREFIX="\uf296"
-export SPACESHIP_CHAR_SUFFIX=(" ")
-export SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
-export SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
-export SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
-export SPACESHIP_USER_SHOW="true"
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,20 +63,9 @@ plugins=(git, zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
 #########################################
 #####        PERSONAL CONFIG        #####
 #########################################
-
-# Start SSH Agent
-eval `ssh-agent -s` > /dev/null
-
-# GPG verification
-export GPG_TTY=$(tty)
 
 # Load aliases
 source $HOME/.aliases
@@ -101,3 +81,14 @@ export PIPENV_IGNORE_VIRTUALENVS=1
 export PIPENV_VENV_IN_PROJECT=1
 export PIPENV_MAX_DEPTH=1
 
+# Start SSH Agent
+eval `ssh-agent -s` > /dev/null
+
+export GPG_TTY=$(tty)
+
+#########################################
+#####     POWERLEVEL10K CONFIG      #####
+#########################################
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
