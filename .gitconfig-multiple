@@ -1,5 +1,0 @@
-[includeIf "gitdir:~/Projects/"]
-  path = ~/.gitconfig-personal
-[includeIf "gitdir:~/whatever/projects/"]
-  path = ~/.gitconfig-whatever
-
